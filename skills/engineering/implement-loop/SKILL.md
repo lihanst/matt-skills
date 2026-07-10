@@ -9,6 +9,6 @@ Use /tdd where possible, at pre-agreed seams.
 
 Run typechecking regularly, single test files regularly, and the full test suite once at the end.
 
-Once done, loop: run /code-review, fix every finding that is not low severity, and repeat until the only remaining issues are low severity.
+Require the user to invoke /code-review-loop alongside this skill. Once implementation is done, follow /code-review-loop until the only remaining findings are low severity.
 
 Commit your work to the current branch.
