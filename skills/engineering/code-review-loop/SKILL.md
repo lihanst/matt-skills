@@ -30,5 +30,3 @@ Classify every finding as:
 8. Run the checks relevant to the fixes.
 9. Start another round with entirely new reviewers. Give them the same clean scope and source material, with no review history.
 10. Stop only when there are no confirmed High or Medium findings.
-
-At the end, report the number of rounds, the confirmed findings fixed, validation results, and any remaining Low findings. Do not commit unless the user's request or another explicitly invoked skill requires it.
