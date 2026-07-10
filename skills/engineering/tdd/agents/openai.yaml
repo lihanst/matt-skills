@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test-Driven Development"
+  short_description: "Build behavior through a red-green test loop"
+  default_prompt: "Use $tdd to build this behavior through a red-green test loop."
