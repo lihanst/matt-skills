@@ -3,7 +3,7 @@ name: code-review-loop
 description: Repeatedly review and fix changes against repository standards and an originating spec until every confirmed finding is low severity.
 ---
 
-Run a convergent review-fix loop. The user must invoke this skill explicitly.
+Run a convergent review-fix loop.
 
 ## Review protocol
 
