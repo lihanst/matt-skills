@@ -1,0 +1,7 @@
+interface:
+  display_name: "Implement Loop"
+  short_description: "Implement and iterate through review findings"
+  default_prompt: "Use $implement-loop to implement this work and iterate until review findings are resolved."
+
+policy:
+  allow_implicit_invocation: false
