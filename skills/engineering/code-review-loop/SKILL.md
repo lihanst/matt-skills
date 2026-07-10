@@ -19,10 +19,10 @@ Classify every finding as:
 
 1. Pin the fixed point and collect the spec and standards sources using the `code-review` protocol.
 2. Spawn the Standards and Spec reviewers in parallel. Every round must use fresh, read-only sub-agents with `fork_turns="none"`.
-3. Give each reviewer the total review scope, the standards and spec material needed for its axis, and `implementation-notes.md` when present. Treat the notes as the implementer's claims, not as authority: verify every recorded decision, deviation, and trade-off against the spec, diff, and repository evidence. Do not reveal the current round, prior findings, prior discussions, fixes already made in response to reviews, or the parent's opinion.
+3. Give each reviewer the total scope and its axis-specific sources. If the notes contain `Deviations`, give only that section to the Spec reviewer and require it to verify those claims against the spec and diff. Give no notes content to the Standards reviewer. Do not reveal the current round, prior findings, prior discussions, fixes already made in response to reviews, or the parent's opinion.
 4. Include these instructions verbatim in every reviewer prompt:
 
-   > Work as a read-only reviewer. Do not edit files, commit, push, or change repository state. Do not load or invoke the code-review skill. Do not spawn sub-agents. Review only the supplied scope and evidence. Treat implementation notes as claims to verify, not as authority. Assign High, Medium, or Low severity to every finding.
+   > Work as a read-only reviewer. Do not edit files, commit, push, or change repository state. Do not load or invoke the code-review skill. Do not spawn sub-agents. Review only the supplied scope and evidence. Assign High, Medium, or Low severity to every finding.
 
 5. After spawning the reviewers, wait quietly for every result. Do not interrupt them, modify code, or do unrelated work while they run.
 6. Assess every finding against the diff, standards, and spec. If you disagree, send the objection to the same reviewer and continue the discussion until the reviewer either withdraws the finding or both sides agree on its wording and severity. Do not fix anything while a disagreement remains unresolved.

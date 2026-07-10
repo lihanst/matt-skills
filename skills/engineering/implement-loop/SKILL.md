@@ -11,6 +11,8 @@ implementation-notes.html (or implementation-notes.md) that records:
 - Trade-offs, shortcuts, or deferred work
 - Anything else the maintainer should know before shipping
 
+Store the notes in a persistent user-owned scratch directory outside the repository, never in an OS-managed temporary directory.
+
 Update the notes when each decision occurs, not retrospectively at the end
 
 Use /tdd where possible, at pre-agreed seams.
