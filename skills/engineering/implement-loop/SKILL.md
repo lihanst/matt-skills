@@ -3,9 +3,13 @@ name: implement-loop
 description: "Implement a piece of work based on a spec or set of tickets."
 ---
 
-Implement the work described by the user in the spec or tickets.
+Implement <SPEC> and, whilst you work, maintain a running
+implementation-notes.html (or implementation-notes.md) that records:
 
-While implementing, keep a running `implementation-notes.md` file with decisions you had to make that were not in the spec, things you had to change, trade-offs you had to make, or anything else the user should know.
+- Decisions you made that were not spelled out in the spec
+- Anything you changed relative to the spec and why
+- Trade-offs, shortcuts, or deferred work
+- Anything else the maintainer should know before shipping
 
 Keep an `implementation-notes.md` file. If you hit an edge case that forces you to deviate from the plan, pick the conservative option, log it under `Deviations`, and keep going.
 
