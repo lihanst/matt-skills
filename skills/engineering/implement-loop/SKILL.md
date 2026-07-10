@@ -5,9 +5,9 @@ description: "Implement a piece of work based on a spec or set of tickets."
 
 Implement the work described by the user in the spec or tickets.
 
-Keep an `implementation-notes.md` file. If you hit an edge case that forces you to deviate from the plan, pick the conservative option, log it under `Deviations`, and keep going.
+While implementing, keep a running `implementation-notes.md` file with decisions you had to make that were not in the spec, things you had to change, trade-offs you had to make, or anything else the user should know.
 
-Also record decisions the spec did not make, trade-offs, and open questions under matching headings. Conservative means the smallest reversible choice that preserves existing behaviour and public interfaces without expanding scope. Do not pause to ask the user about implementation ambiguity; log the choice and continue. Do not put review-round history in this file.
+Keep an `implementation-notes.md` file. If you hit an edge case that forces you to deviate from the plan, pick the conservative option, log it under `Deviations`, and keep going.
 
 Use /tdd where possible, at pre-agreed seams.
 
