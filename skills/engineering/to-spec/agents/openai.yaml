@@ -1,0 +1,7 @@
+interface:
+  display_name: "To Spec"
+  short_description: "Turn current context into a project specification"
+  default_prompt: "Use $to-spec to turn the current conversation into a project specification."
+
+policy:
+  allow_implicit_invocation: false
