@@ -1,0 +1,7 @@
+interface:
+  display_name: "Code Review Loop"
+  short_description: "Review and fix repeatedly until only low risks remain"
+  default_prompt: "Use $code-review-loop to review and fix these changes until only low-severity findings remain."
+
+policy:
+  allow_implicit_invocation: false
