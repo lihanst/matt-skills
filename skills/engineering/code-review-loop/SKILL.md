@@ -19,7 +19,11 @@ Classify every finding as:
 
 1. Pin the fixed point and collect the spec and standards sources using the `code-review` protocol.
 2. Spawn the Standards and Spec reviewers in parallel. Every round must use fresh, read-only sub-agents with `fork_turns="none"`.
-3. Give each reviewer the total scope and its axis-specific sources. If the notes contain `Deviations`, give only that section to the Spec reviewer and require it to verify those claims against the spec and diff. Give no notes content to the Standards reviewer. Do not reveal the current round, prior findings, prior discussions, fixes already made in response to reviews, or the parent's opinion.
+3. Give each reviewer the total scope and its axis-specific sources. If the notes contain `Deviations`, give only that section to the Spec reviewer and require it to verify those claims against the spec and diff. Give no notes content to the Standards reviewer.
+
+> [!IMPORTANT]
+> **Do not reveal the current round, prior findings, prior discussions, fixes already made in response to reviews, or the parent's opinion.**
+
 4. Include these instructions verbatim in every reviewer prompt:
 
    > Work as a read-only reviewer. Do not edit files, commit, push, or change repository state. Do not load or invoke the code-review skill. Do not spawn sub-agents. Review only the supplied scope and evidence. Assign High, Medium, or Low severity to every finding.
