@@ -11,7 +11,7 @@ implementation-notes.html (or implementation-notes.md) that records:
 - Trade-offs, shortcuts, or deferred work
 - Anything else the maintainer should know before shipping
 
-Store the notes under `/Users/lihan/CodexScratch/<repo>/<branch>/`.
+Store the notes under `~/CodexScratch/<repo>/<branch>/`.
 
 Update the notes when each decision occurs, not retrospectively at the end
 
