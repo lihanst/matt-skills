@@ -19,6 +19,6 @@ Use /tdd where possible, at pre-agreed seams.
 
 Run typechecking regularly, single test files regularly, and the full test suite once at the end.
 
-Once implementation is done, follow /code-review-loop until the only remaining findings are low severity.
+Once implementation is done, follow /code-review-loop until the review passes.
 
-Commit your work to the current branch.
+Commit and push your work, then create a pull request.

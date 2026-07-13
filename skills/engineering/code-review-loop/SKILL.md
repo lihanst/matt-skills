@@ -1,6 +1,6 @@
 ---
 name: code-review-loop
-description: Repeatedly review and fix changes against repository standards and an originating spec until every confirmed finding is low severity.
+description: Repeatedly review and fix changes against repository standards and an originating spec until every confirmed finding is resolved.
 ---
 
 Run a convergent review-fix loop.
@@ -30,7 +30,7 @@ Classify every finding as:
 
 5. After spawning the reviewers, wait quietly for every result. Do not interrupt them, modify code, or do unrelated work while they run.
 6. Assess every finding against the diff, standards, and spec. If you disagree, send the objection to the same reviewer and continue the discussion until the reviewer either withdraws the finding or both sides agree on its wording and severity. Do not fix anything while a disagreement remains unresolved.
-7. Once all disagreements are resolved, fix every confirmed High and Medium finding. Leave Low findings unchanged unless the user explicitly asks for them.
+7. Once all disagreements are resolved, fix every confirmed finding, including Low findings.
 8. Run the checks relevant to the fixes.
-9. Start another round with entirely new reviewers. Give them the same clean scope and source material, with no review history.
-10. Stop only when there are no confirmed High or Medium findings.
+9. If the round had any confirmed High or Medium findings, start another round with entirely new reviewers. Give them the same clean scope and source material, with no review history.
+10. If the round had no findings or only confirmed Low findings, stop after fixing the Low findings and running the checks. Do not start another review round.
