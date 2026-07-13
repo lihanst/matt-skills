@@ -21,4 +21,4 @@ Run typechecking regularly, single test files regularly, and the full test suite
 
 Once implementation is done, follow /code-review-loop until the review passes.
 
-Commit and push your work, then create a pull request.
+Commit and push your work, then create a pull request. If the implementation notes contain a `Deviations` section, include that section in the pull request description.
