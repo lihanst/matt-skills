@@ -17,7 +17,7 @@ Update the notes when each decision occurs, not retrospectively at the end
 
 Use /tdd where possible, at pre-agreed seams.
 
-Run typechecking regularly, single test files regularly, and the full test suite once at the end.
+Run single test files regularly, and the full test suite once at the end.
 
 Once implementation is done, follow /code-review-loop until the review passes.
 
