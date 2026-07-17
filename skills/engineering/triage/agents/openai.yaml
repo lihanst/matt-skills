@@ -1,7 +1,5 @@
 interface:
   display_name: "Triage"
-  short_description: "Turn incoming issues into agent-ready briefs"
-  default_prompt: "Use $triage to categorize and prepare these incoming issues for implementation."
-
+  short_description: "Move issues through triage roles"
 policy:
   allow_implicit_invocation: false

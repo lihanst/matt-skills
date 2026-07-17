@@ -1,4 +1,3 @@
 interface:
   display_name: "Domain Modeling"
-  short_description: "Sharpen domain language and record decisions"
-  default_prompt: "Use $domain-modeling to sharpen the domain language and record important decisions."
+  short_description: "Build and sharpen a domain model"
