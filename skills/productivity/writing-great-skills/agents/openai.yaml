@@ -1,7 +1,5 @@
 interface:
   display_name: "Writing Great Skills"
-  short_description: "Design predictable and focused agent skills"
-  default_prompt: "Use $writing-great-skills to improve the predictability and focus of this skill."
-
+  short_description: "Principles for predictable skills"
 policy:
   allow_implicit_invocation: false

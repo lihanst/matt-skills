@@ -1,7 +1,5 @@
 interface:
   display_name: "Grill with Docs"
-  short_description: "Sharpen a plan and capture decisions"
-  default_prompt: "Use $grill-with-docs to sharpen this plan and capture the resulting decisions."
-
+  short_description: "Grill a design and write its docs"
 policy:
   allow_implicit_invocation: false
