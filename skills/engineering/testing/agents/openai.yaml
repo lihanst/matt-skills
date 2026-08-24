@@ -1,0 +1,3 @@
+interface:
+  display_name: "Testing"
+  short_description: "Durable tests through public interfaces"

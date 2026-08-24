@@ -15,7 +15,7 @@ Store the notes under `~/CodexScratch/<repo>/<branch>/`.
 
 Update the notes when each decision occurs, not retrospectively at the end
 
-Use /tdd where possible, at pre-agreed seams.
+Call the Skill tool with "testing" where possible, at pre-agreed seams.
 
 Run single test files regularly, and the full test suite once at the end.
 
