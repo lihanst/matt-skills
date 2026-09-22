@@ -1,16 +1,17 @@
 ## What it does
 
-`testing` is the general reference for tests worth keeping: public interfaces, agreed test seams, vertical slices, independent expected values, and mocks at system boundaries.
+`testing` is the general reference for tests worth keeping: public interfaces, agreed test seams, vertical slices, independent expected values, mocks at system boundaries, and a suite laid out by behaviour rather than by the implementation's class hierarchy.
 
-It deliberately leaves the order of tests and implementation open. The implementation and tests should inform each other within the same observable-behaviour slice, but the skill does not prescribe which one comes first.
+It deliberately leaves the order of tests and implementation open. The implementation and tests should inform each other within the same observable-behaviour slice, but the skill does not prescribe which one comes first. What it does fix is how each test reads: a three-line Given/When/Then comment block opens every test body, so the scenario is legible without the code.
 
 ## When to reach for it
 
-Type `/testing`, or the [agent](https://www.aihero.dev/ai-coding-dictionary/agent) reaches for it automatically when a task needs automated or integration tests without a prescribed test-first workflow.
+Type `/testing`, or the [agent](https://www.aihero.dev/ai-coding-dictionary/agent) reaches for it automatically when a task needs automated or integration tests without a prescribed test-first workflow, or when an existing suite needs reviewing or reorganising.
 
 | Your situation | Where to go |
 | --- | --- |
 | You want durable tests and the agent may choose the test timing | `testing` |
+| An existing suite needs reviewing or reorganising | `testing` |
 | You explicitly want test-first or red-green | [tdd](https://aihero.dev/skills-tdd) |
 | The behaviour is not settled yet | [to-spec](https://aihero.dev/skills-to-spec) |
 | The open question is the shape of the interface | [codebase-design](https://aihero.dev/skills-codebase-design) |
@@ -26,11 +27,20 @@ A **seam** is the public boundary where behaviour can be observed without reachi
 
 Within each seam, work stays vertical: one observable behaviour, its implementation and tests, then the next behaviour. The test can arrive at any point inside that slice. The opposite is horizontal slicing, where implementation and tests land as separate batches and stop informing each other.
 
-The tests themselves follow three constraints:
+The tests themselves follow four constraints:
 
 - Verify behaviour through public interfaces, so internal refactors do not break them.
+- Open with a Given/When/Then comment block that states the scenario before the code does.
 - Take expected values from an independent source such as a spec, worked example, or known literal.
 - Mock system boundaries such as external APIs, time, or randomness, not internal collaborators.
+
+## Organising the suite
+
+Test layout serves the reviewer, not the implementation's class hierarchy. The skill respects the repository's existing test roots and naming first, then groups by feature and observable behaviour at the agreed seams. The hierarchy stays shallow: a small suite stays flat, and a directory earns its place only when it groups a real responsibility or separates tests with genuinely different execution needs. Files take their names from the behaviour or boundary under test, and split only when unrelated behaviours make a file hard to review, never to hit a line count.
+
+Because the hierarchy stays shallow, a reader still has to know what a given test needs to run. Deterministic behaviour tests are kept distinct from tests of adapters against real resources and from end-to-end integration tests, using the repository's own directories, suites, or tags rather than a mandatory layer tree. Support code follows its consumers: single-file helpers stay local, fixtures and fakes shared within a feature move into a nearby `Support` directory (or the repository's equivalent), and only helpers shared across features go to a common root.
+
+Splitting files never splits a logical suite. Tests that share process-wide or device resources keep their isolation or serialization across directories, and nothing may depend on execution order or assume separate files cannot run concurrently.
 
 ## Common questions
 
@@ -55,6 +65,8 @@ Usually not. They are often too slow and failure-prone to guide each implementat
 - The intended test seams are named and confirmed before test files change.
 - Implementation and tests stay together around one observable behaviour at a time.
 - Test names read as capabilities, not internal call sequences.
+- Each test opens with a Given/When/Then block a reader can follow without the code.
+- Test files and directories are named after behaviour, not implementation layers.
 - Renaming an internal function does not break the suite.
 - Expected values trace to a spec or known example rather than recomputing the implementation.
 - Mocks appear at external boundaries, not around the project's own modules.

@@ -31,7 +31,7 @@ The word the skill gives you to think with is **flow**: a path *through* the ski
 - **Standalones**, off every flow, reached for on their own terms: the prototype, the questionnaire, the merge conflict you are already sitting in.
 - **A vocabulary layer underneath**, the two references the other skills pull in when the words rather than the process are the problem.
 
-Inside the main flow, `implement` drives [testing](https://aihero.dev/skills-testing) by default so test timing can follow the task. When test-first red-green ordering is itself the goal, the router points to [tdd](https://aihero.dev/skills-tdd) instead.
+Inside the main flow, `implement` drives [testing](https://aihero.dev/skills-testing) by default so test timing can follow the task, and the same skill is the route to reach for on its own when an existing suite needs reviewing or reorganising. When test-first red-green ordering is itself the goal, the router points to [tdd](https://aihero.dev/skills-tdd) instead.
 
 ## The phase boundary
 
