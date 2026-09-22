@@ -7,6 +7,9 @@
 ```typescript
 // GOOD: Tests observable behavior
 test("user can checkout with valid cart", async () => {
+  // Given a cart with a valid product
+  // When the user checks out with a valid payment method
+  // Then the order is confirmed
   const cart = createCart();
   cart.add(product);
   const result = await checkout(cart, paymentMethod);
@@ -54,6 +57,9 @@ test("createUser saves to database", async () => {
 
 // GOOD: Verifies through interface
 test("createUser makes user retrievable", async () => {
+  // Given no user named Alice exists
+  // When Alice is created and then fetched by her id
+  // Then the fetched user is named Alice
   const user = await createUser({ name: "Alice" });
   const retrieved = await getUser(user.id);
   expect(retrieved.name).toBe("Alice");
@@ -72,6 +78,9 @@ test("calculateTotal sums line items", () => {
 
 // GOOD: Expected value is an independent, known literal
 test("calculateTotal sums line items", () => {
+  // Given line items priced 10 and 5
+  // When calculateTotal sums them
+  // Then the total is the known literal 15
   expect(calculateTotal([{ price: 10 }, { price: 5 }])).toBe(15);
 });
 ```
