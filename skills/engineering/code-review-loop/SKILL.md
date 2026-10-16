@@ -11,9 +11,9 @@ Read `../code-review/SKILL.md` before starting. Reuse its fixed-point, spec-sour
 
 Classify every finding as:
 
-- **High** — correctness, security, data-loss, or major spec-compliance risk.
-- **Medium** — a concrete reliability, test, or maintainability problem with credible impact.
-- **Low** — optional polish, minor style, or low-risk improvement.
+- **High:** correctness, security, data-loss, or major spec-compliance risk.
+- **Medium:** a concrete reliability, test, or maintainability problem with credible impact.
+- **Low:** optional polish, minor style, or low-risk improvement.
 
 ## Loop
 

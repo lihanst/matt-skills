@@ -23,6 +23,8 @@ Type `/testing`, or the [agent](https://www.aihero.dev/ai-coding-dictionary/agen
 
 ## Flexible timing at a pre-agreed seam
 
+During exploration, the skill reads the project's `GLOSSARY.md` when present, so test names and interface vocabulary use the same domain language.
+
 A **seam** is the public boundary where behaviour can be observed without reaching into internals. Testing effort is finite, so the skill names the seams it intends to test and confirms them with you before writing a test.
 
 Within each seam, work stays vertical: one observable behaviour, its implementation and tests, then the next behaviour. The test can arrive at any point inside that slice. The opposite is horizontal slicing, where implementation and tests land as separate batches and stop informing each other.
